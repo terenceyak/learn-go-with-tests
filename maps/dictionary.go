@@ -53,3 +53,7 @@ func (d Dictionary) Update(word, definition string) error {
 
 	return nil
 }
+
+func (d Dictionary) Delete(word string) {
+	delete(d, word) // Deleting a value that is not there has no effect, we do not need to complicate API with errors
+}
